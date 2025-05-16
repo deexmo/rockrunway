@@ -179,7 +179,7 @@ function rungame() {
         bullets.splice(i, 1);
         obstacles.splice(j, 1);
         score++;
-        if (score >= 50) {
+        if (score >= 60) {
           state = "gameWon";
         }
 
