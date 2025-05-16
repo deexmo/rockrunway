@@ -257,7 +257,7 @@ function title() {
   textSize(22);
   // text("Shred your way to fame", width / 2, 260);
   textSize(30);
-  text("Press Enter to Play", width / 2, 400);
+  text("Press Space to Play", width / 2, 400);
 }
 
 function gameWon() {
@@ -270,7 +270,7 @@ function gameWon() {
   text("You Broke Through the Noise", width / 2, 240);
   text("Encore Awaits", width / 2, 280);
   textSize(25);
-  text("Press Enter to Try Again", width / 2, 400);
+  text("Press Space to Try Again", width / 2, 400);
 }
 
 function gameover() {
@@ -282,7 +282,7 @@ function gameover() {
   text("Dream Deferred", width / 2, 200);
   text("Try Again, Rockstar", width / 2, 240);
   textSize(25);
-  text("Press Enter to Try Again", width / 2, 400);
+  text("Press Space to Try Again", width / 2, 400);
 }
 
 function drawScore() {
@@ -294,7 +294,7 @@ function drawScore() {
 }
 
 function keyPressed() {
-  if (state === "title" && key === "Enter") {
+  if (state === "title" && key === " ") {
     state = "rungame";
 
     if (!musicStarted && bgMusic) {
@@ -306,7 +306,7 @@ function keyPressed() {
     }
   }
 
-  if ((state === "gameover" || state === "gameWon") && key === "Enter") {
+  if ((state === "gameover" || state === "gameWon") && key === " ") {
     resetGame();
     state = "rungame";
     lives = 3;
