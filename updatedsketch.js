@@ -116,7 +116,7 @@ function rungame() {
   difficultyMultiplier = min(difficultyMultiplier, 1.5);
 
   // spawn frequency, decreases interval as multiplier increases
-  if (frameCount % floor(40 / difficultyMultiplier) === 0) {
+  if (frameCount % floor(50 / difficultyMultiplier) === 0) {
     let laneIndex = floor(random(lanes.length));
     let laneX = lanes[laneIndex];
     let type = random(obstacleTypes);
@@ -179,7 +179,7 @@ function rungame() {
         bullets.splice(i, 1);
         obstacles.splice(j, 1);
         score++;
-        if (score >= 60) {
+        if (score >= 50) {
           state = "gameWon";
         }
 
